@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-img">
+    <img class="card-img-src" [src]="cardDetails.img" />
+  </div>
+  <div class="card-body">
+    <div class="card-date">{{cardDetails.createdon | date : "MMM d, y, h:mm:ss a"}}</div>
+    <div class="card-title">{{cardDetails.title}}</div>
+    <div class="card-summary">{{cardDetails.summary}}</div>
+  </div>
+</div>

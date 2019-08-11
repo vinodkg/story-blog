@@ -1,0 +1,12 @@
+.card-list {
+    flex-wrap: wrap;
+    justify-content: space-between;    
+    margin: 40px auto 0 auto;
+}
+
+@media (min-width: 1025px) {
+    .card-list {
+        display: flex;
+        width: 75%;
+    }   
+}

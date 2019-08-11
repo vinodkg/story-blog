@@ -1,0 +1,17 @@
+<div class="header">
+  <img src="assets/images/company-logo.png" alt="" class="company-logo-src">
+  <div class="header-menu">
+    <div class="header-menu-item">
+      <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'home'}" (click)="headerMenuClicked('home')">Home</div>
+    </div>
+    <div class="header-menu-item">
+        <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'positions'}" (click)="headerMenuClicked('positions')">Open positions</div>
+    </div>
+    <div class="header-menu-item">
+        <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'achievements'}" (click)="headerMenuClicked('achievements')">My achievements</div>
+    </div>
+  </div>
+  <!-- <div class="header-user-details">
+    <div class="header-user-gemes"></div>
+  </div> -->
+</div>

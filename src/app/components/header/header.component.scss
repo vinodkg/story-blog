@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    height: 5rem;
+    width: 75%;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+img.company-logo-src {
+    height: 100%;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-menu-item {
+    flex-wrap: nowrap;    
+    justify-content: center;
+    align-content: space-between;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header-menu-item-name{
+    cursor: pointer;
+    &:hover{
+        border-bottom: 3px solid #563d7c;
+        transition: border-color 0.4s ease;
+    }
+}
+
+.header-menu-item-name.active {
+    border-bottom: 3px solid #563d7c;
+}
