@@ -1,0 +1,79 @@
+.referrals {
+    width: 95%;
+    margin: auto;
+}
+
+.referrals-list{
+    margin-top: 2rem;
+}
+
+.referral-details-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.referral-item-first-line {
+    display: flex;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.referral-item-second-line {
+    display: flex;
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.referral-item-title {
+    flex: 1;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.referral-item-status {
+    flex: 1;
+    text-align: right;
+}
+
+.referral-item-subtitle {
+    flex: 1;
+}
+
+.referral-item-date {
+    flex: 1;
+    text-align: right;
+}
+
+@media (min-width: 1025px){
+    .referrals {
+        width: 75%;
+    }
+}
+
+.referral-item-status-flag {
+    width: 6rem;
+    float: right;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.03rem;
+}
+
+.flag-applied {
+    background: #17a2b8;
+}
+
+.flag-hired {
+    background: #28a745;
+}
+
+.flag-progress {
+    background: #6c757d;
+}
+
+.flag-nothired {
+    background: #dc3545;
+}
