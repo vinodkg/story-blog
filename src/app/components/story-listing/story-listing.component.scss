@@ -1,13 +1,11 @@
 .card-list {
-    width: 95%;
     flex-wrap: wrap;
-    justify-content: space-between;    
+    justify-content: space-around;    
     margin: 40px auto 0 auto;
 }
 
 @media (min-width: 1025px) {
     .card-list {
         display: flex;
-        width: 75%;
     }   
 }

@@ -1,11 +1,14 @@
-<div class="summary-card">
+<div class="body-content">
+  <div class="summary-card">
     <div class="summary-card-head">
       <div class="summary-card-cell">
         <div class="summary-card-cell-head">
           Points
         </div>
         <div class="summary-card-cell-body">
-          5180
+          5180 <span class="summary-card-cell-image">
+            <img src="assets/images/coin.png" alt="" class="summary-head-cell-image">
+          </span>
         </div>
       </div>
     </div>
@@ -19,23 +22,25 @@
         </div>
       </div>
       <div class="summary-card-cell">
-          <div class="summary-card-cell-head">
-            Applications
-          </div>
-          <div class="summary-card-cell-body">
-            20
-          </div>
+        <div class="summary-card-cell-head">
+          Applications
         </div>
-        <div class="summary-card-cell">
-            <div class="summary-card-cell-head">
-              Hired
-            </div>
-            <div class="summary-card-cell-body">
-              8
-            </div>
-          </div>
+        <div class="summary-card-cell-body">
+          20
+        </div>
+      </div>
+      <div class="summary-card-cell">
+        <div class="summary-card-cell-head">
+          Hired
+        </div>
+        <div class="summary-card-cell-body">
+          8
+        </div>
+      </div>
     </div>
   </div>
-<div class="card-list">
-  <story-card [details]="story" *ngFor="let story of stories" (click)="showStory(story, $event)"></story-card>
+  <div class="section-heading">Stories (20)</div>
+  <div class="card-list">
+    <story-card [details]="story" *ngFor="let story of stories" (click)="showStory(story, $event)"></story-card>
+  </div>
 </div>

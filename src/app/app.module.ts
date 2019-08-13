@@ -10,7 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { PositionsComponent } from './components/positions/positions.component';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { ReferralsComponent } from './components/referrals/referrals.component';
-import { StatusPipe } from './pipes/status.pipe';
+import { StatusPipe } from './pipes/status/status.pipe';
+import { JobstatusPipe } from './pipes/jobstatus/jobstatus.pipe';
+import { ToDaysPipe } from './pipes/to-days/to-days.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { StatusPipe } from './pipes/status.pipe';
     PositionsComponent,
     AchievementsComponent,
     ReferralsComponent,
-    StatusPipe
+    StatusPipe,
+    JobstatusPipe,
+    ToDaysPipe
   ],
   imports: [
     BrowserModule,
