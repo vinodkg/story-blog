@@ -1,0 +1,93 @@
+.form-field {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-content: center;
+}
+
+.form-field-title {
+    flex-direction: row;
+}
+
+.form-title-field {
+    flex: 2;
+}
+
+@media (min-width:1025px){
+    .form-title-field {
+        flex: 10;
+    }   
+}
+
+.form-image-field {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.form-input-element{
+    flex: 1;
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    &:focus {
+        outline: 0px;
+    }
+    -webkit-appearance: none;
+    color: rgba(0, 0, 0, 0.84);
+    border-radius: 0.2rem; 
+}
+
+.form-field-input {
+    display: flex;
+
+}
+
+.form-input-element-textarea {
+    height: 20rem;
+}
+
+.form-field-label {
+    padding-bottom: 1.125rem;
+    &::after {
+        content: "*";
+        font-size: 1rem;
+    }
+}
+
+.form-image-button {
+    height: 2rem;
+}
+
+.form-action-buttons {
+    width: 15rem;
+    height: 3rem;
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+button {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 0.2rem;
+    &:focus{
+        outline: none;
+    } 
+    cursor: pointer;
+}
+
+.form-actions {
+    align-items: center;
+}
+
+.button-positive {
+    background: #17a2b8;
+}
+
+.button-negative {
+    background: #6c757d;
+}

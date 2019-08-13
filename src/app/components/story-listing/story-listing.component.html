@@ -39,7 +39,12 @@
       </div>
     </div>
   </div>
-  <div class="section-heading">Stories (20)</div>
+  <div class="story-heading">
+      <div class="section-heading stories-count">Current Stories (20)</div>
+      <div class="new-story">
+          <button class="new-story-button" routerLink="/newstory">Add Story</button>
+      </div>
+  </div>
   <div class="card-list">
     <story-card [details]="story" *ngFor="let story of stories" (click)="showStory(story, $event)"></story-card>
   </div>

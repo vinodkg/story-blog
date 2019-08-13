@@ -10,12 +10,14 @@
 html{
     font-size: 16px;
     font-family: "nunito-sans-light";
+    height: 100%;
 }
 
 
 body{
     margin: 0px;
     background: rgba(0,0,0,0.05);
+    height: 100%;
 }
 .card {
     margin: auto auto 1.25rem auto ;
@@ -96,17 +98,18 @@ body{
     margin: auto;
     background: #FFFFFF;
     padding: 1rem;
+    min-height: calc(100% - 5rem);
 }
 
 @media (min-width: 1025px) {
     .body-content {
-        width: 75%;
+        width: 85%;
         padding: 3rem;
     }   
 }
 
 .section-heading {
-    padding: 1rem;
+    padding: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
     padding-left: 0;
@@ -163,7 +166,7 @@ body{
 
 @media (min-width: 1025px){
     .referrals {
-        width: 75%;
+        width: 85%;
     }
 }
 

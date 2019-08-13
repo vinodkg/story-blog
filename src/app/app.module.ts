@@ -13,6 +13,8 @@ import { ReferralsComponent } from './components/referrals/referrals.component';
 import { StatusPipe } from './pipes/status/status.pipe';
 import { JobstatusPipe } from './pipes/jobstatus/jobstatus.pipe';
 import { ToDaysPipe } from './pipes/to-days/to-days.pipe';
+import { NewstoryComponent } from './components/newstory/newstory.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ToDaysPipe } from './pipes/to-days/to-days.pipe';
     ReferralsComponent,
     StatusPipe,
     JobstatusPipe,
-    ToDaysPipe
+    ToDaysPipe,
+    NewstoryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
