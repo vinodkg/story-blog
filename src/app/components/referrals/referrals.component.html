@@ -1,0 +1,60 @@
+<div class="referrals">
+  <div class="referrals-summary">
+    <div class="summary-card">
+      <div class="summary-card-head">
+        <div class="summary-card-cell">
+          <div class="summary-card-cell-head">
+            Points
+          </div>
+          <div class="summary-card-cell-body">
+            5180
+          </div>
+        </div>
+      </div>
+      <div class="summary-card-body">
+        <div class="summary-card-cell">
+          <div class="summary-card-cell-head">
+            Links
+          </div>
+          <div class="summary-card-cell-body">
+            56
+          </div>
+        </div>
+        <div class="summary-card-cell">
+            <div class="summary-card-cell-head">
+              Applications
+            </div>
+            <div class="summary-card-cell-body">
+              20
+            </div>
+          </div>
+          <div class="summary-card-cell">
+              <div class="summary-card-cell-head">
+                Hired
+              </div>
+              <div class="summary-card-cell-body">
+                8
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="referrals-list">
+      <div class="referral-details-item" *ngFor="let referral of referrals">
+        <div class="referral-item-first-line">
+          <div class="referral-item-title">{{referral.name}}</div>
+          <div class="referral-item-status">
+            <div class="referral-item-status-flag" [ngClass]="{'flag-applied' : referral.status == 1, 
+            'flag-progress' : referral.status == 2, 
+            'flag-hired' : referral.status == 3, 
+            'flag-nothired' : referral.status == 4
+  }">{{referral.status | status}}</div>
+          </div>
+        </div>
+        <div class="referral-item-second-line">
+            <div class="referral-item-subtitle">{{referral.positionName}}</div>
+            <div class="referral-item-date">{{referral.appliedOn | date : "MMM d, y"}}</div>
+        </div>
+      </div>
+  </div>
+</div>
