@@ -1,53 +1,54 @@
-<div class="referrals">
+<div class="body-content">
   <div class="referrals-summary">
     <div class="summary-card">
       <div class="summary-card-head">
         <div class="summary-card-cell">
           <div class="summary-card-cell-head">
-            Points
+            Referrals
           </div>
           <div class="summary-card-cell-body">
-            5180
+            25
           </div>
         </div>
       </div>
       <div class="summary-card-body">
         <div class="summary-card-cell">
           <div class="summary-card-cell-head">
-            Links
+            Applied
           </div>
           <div class="summary-card-cell-body">
-            56
+            16
           </div>
         </div>
         <div class="summary-card-cell">
             <div class="summary-card-cell-head">
-              Applications
+              Hired
             </div>
             <div class="summary-card-cell-body">
-              20
+              12
             </div>
           </div>
           <div class="summary-card-cell">
               <div class="summary-card-cell-head">
-                Hired
+                In Process
               </div>
               <div class="summary-card-cell-body">
-                8
+                2
               </div>
             </div>
       </div>
     </div>
   </div>
   <div class="referrals-list">
+      <div class="section-heading">Referrals (10)</div>
       <div class="referral-details-item" *ngFor="let referral of referrals">
         <div class="referral-item-first-line">
           <div class="referral-item-title">{{referral.name}}</div>
           <div class="referral-item-status">
-            <div class="referral-item-status-flag" [ngClass]="{'flag-applied' : referral.status == 1, 
+            <div class="referral-item-status-flag" [ngClass]="{'flag-info' : referral.status == 1, 
             'flag-progress' : referral.status == 2, 
-            'flag-hired' : referral.status == 3, 
-            'flag-nothired' : referral.status == 4
+            'flag-success' : referral.status == 3, 
+            'flag-error' : referral.status == 4
   }">{{referral.status | status}}</div>
           </div>
         </div>

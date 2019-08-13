@@ -5,10 +5,9 @@ export class Position {
         this.postionId = 4232;
         this.positionName = "Designer (m/f/x)";
         this.postedon = new Date().getTime();
-        this.location = "Munich, Bavaria, Germany";    
+        this.location = "Munich, Bavaria";    
         this.department = "Product";
         this.status = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-
     }
     
     postionId : Number;
