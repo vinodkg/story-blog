@@ -1,11 +1,39 @@
 .card-list {
     flex-wrap: wrap;
-    justify-content: space-around;    
-    margin: 40px auto 0 auto;
+    justify-content: space-between;    
 }
 
 @media (min-width: 1025px) {
     .card-list {
         display: flex;
     }   
+}
+
+.story-heading {
+    display: flex;
+    align-items: center;
+}
+
+.stories-count {
+    width: 70%;
+}
+
+.new-story {
+    width: 30%;
+    text-align: right;
+}
+
+.new-story-button {
+    height: 2rem;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 0.2rem;
+    &:focus{
+        outline: none;
+    } 
+    cursor: pointer;
+    background: #17a2b8;
+    color: #FFFFFF;
+    font-size: 1rem;
+    min-width: 3rem;
 }

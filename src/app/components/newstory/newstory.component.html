@@ -1,0 +1,37 @@
+<div class="body-content">
+  <form action="" [formGroup]="storyForm" class="story-form"> 
+    <div class="form-field form-field-title">
+      <div class="form-title-field">
+        <div class="form-field-label">
+          Title
+        </div>
+        <div class="form-field-input">
+          <input type="text" formControlName="title" class="form-input-element"/>
+        </div>
+      </div>
+      <div class="form-image-field">
+        <button class="form-image-button">Upload Picture</button>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-field-label">
+        Summary
+      </div>
+      <div class="form-field-input">
+        <input type="text" formControlName="summary" class="form-input-element" />
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-field-label">
+        Content
+      </div>
+      <div class="form-field-input">
+        <textarea cols="30" rows="10" formControlName="content" class="form-input-element form-input-element-textarea"></textarea>
+      </div>
+    </div>
+    <div class="form-field form-actions">
+      <button class="form-action-buttons button-positive" routerLink="/home">Submit</button>
+      <button class="form-action-buttons button-negative" routerLink="/home">Reset</button>
+    </div>
+  </form>
+</div>
