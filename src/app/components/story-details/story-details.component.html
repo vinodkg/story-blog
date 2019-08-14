@@ -1,17 +1,17 @@
-<div class="body-content">
+<div class="body-content" [ngClass]="{'preview-mode' : _isPreviewMode}">
   <div class="story-details">
     <div class="story-title">
-      {{storyDetails.title}}
+      {{storyDetails.title | defaultText : 'title'}}
     </div>
     <div class="story-author-details">
       <div class="story-author">{{storyDetails.author}}</div>
       <div class="story-time">{{storyDetails.createdon | date : "MMM d, y, h:mm:ss a"}}</div>
     </div>
     <div class="story-image">
-      <img [src]="storyDetails.img" alt="" class="story-image-src">
+      <img src="{{ storyDetails.img | defaultText : 'img' }}" alt="" class="story-image-src">
     </div>
     <div class="story-content">
-      {{storyDetails.content}}
+      {{storyDetails.content | defaultText : 'content'}}
     </div>
   </div>
 </div>
