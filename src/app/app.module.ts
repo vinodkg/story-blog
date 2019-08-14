@@ -15,6 +15,7 @@ import { JobstatusPipe } from './pipes/jobstatus/jobstatus.pipe';
 import { ToDaysPipe } from './pipes/to-days/to-days.pipe';
 import { NewstoryComponent } from './components/newstory/newstory.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DefaultTextPipe } from './pipes/default-text/default-text.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     StatusPipe,
     JobstatusPipe,
     ToDaysPipe,
-    NewstoryComponent
+    NewstoryComponent,
+    DefaultTextPipe
   ],
   imports: [
     BrowserModule,

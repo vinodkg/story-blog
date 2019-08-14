@@ -1,37 +1,54 @@
 <div class="body-content">
-  <form action="" [formGroup]="storyForm" class="story-form"> 
-    <div class="form-field form-field-title">
-      <div class="form-title-field">
-        <div class="form-field-label">
-          Title
+  <div class="new-story-editor">
+    <div class="story-form">
+      <form action="" [formGroup]="storyForm" class="story-form" (ngSubmit)="onSubmit()" (ngReset)="onReset()">
+          <div class="form-field">
+              <div class="form-field-label">
+                  Cover Image
+              </div>
+              <div class="form-field-input">
+                <img [src]="coverImagePreviewUrl" alt="Test" class="story-cover-image" (error)="showPlachoder($event)" (click)="addCoverImage(fileChooser)">
+                <input type="file" style="display: none" #fileChooser accept="image/x-png,image/gif,image/jpeg" (change)="updateCoverImage($event)" formControlName="img">
+              </div>  
+          </div>
+        <div class="form-field form-field-title" [ngClass]="{'form-field-invalid' : (!storyForm.get('title').valid && storyForm.get('title').touched) }">
+          <div class="form-title-field">
+            <div class="form-field-label">
+              Title
+            </div>
+            <div class="form-field-input">
+              <input type="text" formControlName="title" class="form-input-element" />
+            </div>
+            <div class="form-field-error-label">Title is mandatory</div>
+          </div>
         </div>
-        <div class="form-field-input">
-          <input type="text" formControlName="title" class="form-input-element"/>
+        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('summary').valid && storyForm.get('summary').touched) }">
+          <div class="form-field-label">
+            Summary
+          </div>
+          <div class="form-field-input">
+            <input type="text" formControlName="summary" class="form-input-element" />
+          </div>
+          <div class="form-field-error-label">Summary is mandatory</div>
         </div>
-      </div>
-      <div class="form-image-field">
-        <button class="form-image-button">Upload Picture</button>
-      </div>
+        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('content').valid && storyForm.get('content').touched) }">
+          <div class="form-field-label">
+            Content
+          </div>
+          <div class="form-field-input">
+            <textarea cols="30" rows="10" formControlName="content"
+              class="form-input-element form-input-element-textarea"></textarea>
+          </div>
+          <div class="form-field-error-label">Content is mandatory</div>
+        </div>
+        <div class="form-field form-actions">
+          <button class="form-action-buttons button-positive" type="submit">Submit</button>
+          <button class="form-action-buttons button-negative" type="reset">Reset</button>
+        </div>
+      </form>
     </div>
-    <div class="form-field">
-      <div class="form-field-label">
-        Summary
-      </div>
-      <div class="form-field-input">
-        <input type="text" formControlName="summary" class="form-input-element" />
-      </div>
+    <div class="story-preview">
+        <story-details [previewMode]="'true'" [story]="newStoryDetails"></story-details>
     </div>
-    <div class="form-field">
-      <div class="form-field-label">
-        Content
-      </div>
-      <div class="form-field-input">
-        <textarea cols="30" rows="10" formControlName="content" class="form-input-element form-input-element-textarea"></textarea>
-      </div>
-    </div>
-    <div class="form-field form-actions">
-      <button class="form-action-buttons button-positive" routerLink="/home">Submit</button>
-      <button class="form-action-buttons button-negative" routerLink="/home">Reset</button>
-    </div>
-  </form>
+  </div>
 </div>
