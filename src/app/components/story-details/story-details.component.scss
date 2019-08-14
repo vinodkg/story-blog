@@ -36,6 +36,12 @@
 }
 
 .preview-mode {
-    padding: 0px;
+    margin-top: 1rem; 
     font-size: 8px;
+}
+
+@media (min-width:1025px){
+    .preview-mode {
+        padding: 0px;
+    }   
 }

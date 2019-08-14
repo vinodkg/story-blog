@@ -1,5 +1,7 @@
 {
   "projects": {
-    "storyblog": "EmployeeBlog"
+    "storyblog": "EmployeeBlog",
+    "production": "employeeblog-6de61",
+    "default": "employeeblog-6de61"
   }
 }

@@ -16,7 +16,10 @@
 @media (min-width:1025px){
     .form-title-field {
         flex: 10;
-    }   
+    }  
+    .new-story-editor { 
+        display: flex;
+    }
 }
 
 .form-image-field {
@@ -99,7 +102,6 @@ button {
 }
 
 .new-story-editor {
-    display: flex;
     justify-content: space-between;
 }
 

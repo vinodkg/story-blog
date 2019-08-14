@@ -7,7 +7,7 @@ import { PositionsComponent } from './components/positions/positions.component';
 import { NewstoryComponent } from './components/newstory/newstory.component';
 
 const routes: Routes = [
-  {"path" : "", redirectTo: "newstory", pathMatch: "full"},
+  {"path" : "", redirectTo: "home", pathMatch: "full"},
   {"path": "home", "component": StoryListingComponent},
   {"path": "home/:storyid", "component": StoryDetailsComponent},
   {"path" : "referrals", "component" : ReferralsComponent},
