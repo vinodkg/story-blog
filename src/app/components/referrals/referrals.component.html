@@ -25,7 +25,7 @@
               Hired
             </div>
             <div class="summary-card-cell-body">
-              12
+              6
             </div>
           </div>
           <div class="summary-card-cell">
@@ -40,8 +40,8 @@
     </div>
   </div>
   <div class="referrals-list">
-      <div class="section-heading">Referrals (10)</div>
-      <div class="referral-details-item" *ngFor="let referral of referrals">
+      <div class="section-heading">Referrals (20)</div>
+      <div class="referral-details-item" *ngFor="let referral of referrals" (click)="openReferral(referral, $event)">
         <div class="referral-item-first-line">
           <div class="referral-item-title">{{referral.name}}</div>
           <div class="referral-item-status">

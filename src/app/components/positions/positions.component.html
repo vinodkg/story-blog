@@ -1,7 +1,7 @@
 <div class="body-content">
-    <div class="section-heading position-section-heading">Open Positions (10)</div>
+    <div class="section-heading position-section-heading">Open Positions (20)</div>
     <div class="referrals-list">
-        <div class="referral-details-item" *ngFor="let position of positions">
+        <div class="referral-details-item" *ngFor="let position of positions" (click)="openPostionDetails(position, $event)">
           <div class="referral-item-first-line">
             <div class="referral-item-title">{{position.positionName}}</div>
             <div class="referral-item-status">

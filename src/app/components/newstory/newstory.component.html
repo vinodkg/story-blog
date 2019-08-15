@@ -1,17 +1,17 @@
 <div class="body-content">
   <div class="new-story-editor">
-    <div class="story-form">
+    <div class="story-form-container">
       <form action="" [formGroup]="storyForm" class="story-form" (ngSubmit)="onSubmit()" (ngReset)="onReset()">
-          <div class="form-field">
+          <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('img').valid && storyForm.get('img').touched)  ||  !storyForm.get('img').valid && isSubmitted }">
               <div class="form-field-label">
                   Cover Image
               </div>
               <div class="form-field-input">
-                <img [src]="coverImagePreviewUrl" alt="Test" class="story-cover-image" (error)="showPlachoder($event)" (click)="addCoverImage(fileChooser)">
+                <img [src]="coverImagePreviewUrl | sanitizeUrl" alt="Test" class="story-cover-image" (error)="showPlachoder($event)" (click)="addCoverImage(fileChooser)">
                 <input type="file" style="display: none" #fileChooser accept="image/x-png,image/gif,image/jpeg" (change)="updateCoverImage($event)" formControlName="img">
               </div>  
           </div>
-        <div class="form-field form-field-title" [ngClass]="{'form-field-invalid' : (!storyForm.get('title').valid && storyForm.get('title').touched) }">
+        <div class="form-field form-field-title" [ngClass]="{'form-field-invalid' : (!storyForm.get('title').valid && storyForm.get('title').touched) ||  (!storyForm.get('title').valid && isSubmitted) }">
           <div class="form-title-field">
             <div class="form-field-label">
               Title
@@ -22,7 +22,7 @@
             <div class="form-field-error-label">Title is mandatory</div>
           </div>
         </div>
-        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('summary').valid && storyForm.get('summary').touched) }">
+        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('summary').valid && storyForm.get('summary').touched)  ||  !storyForm.get('summary').valid && isSubmitted }">
           <div class="form-field-label">
             Summary
           </div>
@@ -31,7 +31,7 @@
           </div>
           <div class="form-field-error-label">Summary is mandatory</div>
         </div>
-        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('content').valid && storyForm.get('content').touched) }">
+        <div class="form-field" [ngClass]="{'form-field-invalid' : (!storyForm.get('content').valid && storyForm.get('content').touched)  ||  !storyForm.get('content').valid && isSubmitted }">
           <div class="form-field-label">
             Content
           </div>

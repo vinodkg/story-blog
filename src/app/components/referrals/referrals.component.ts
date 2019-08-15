@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Referral } from '../../models/referral.model';
+import { DataService } from 'src/app/services/dataservices/data.service';
 
 @Component({
   selector: 'app-referrals',
@@ -10,11 +11,15 @@ export class ReferralsComponent implements OnInit {
 
   referrals : Referral[] = [];
 
-  constructor() { }
+  constructor(private dataServices: DataService) {
+    this.referrals = dataServices.getReferrals();
+   }
 
   ngOnInit() {
-    for(let i=0;i<10;i++){
-      this.referrals.push(new Referral());
-    }
+    
+  }
+  
+  openReferral(referral, event){
+    window.alert("Coming soon!");
   }
 }
