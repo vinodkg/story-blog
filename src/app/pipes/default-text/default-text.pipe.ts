@@ -18,10 +18,8 @@ export class DefaultTextPipe implements PipeTransform {
           case "content":
               defaultText = "Your content here!";
               break;
-
       }
     }
-    
     return defaultText;
   }
 
