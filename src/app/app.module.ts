@@ -8,7 +8,6 @@ import { StoryDetailsComponent } from './components/story-details/story-details.
 import { StoryCardComponent } from './components/story-card/story-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PositionsComponent } from './components/positions/positions.component';
-import { AchievementsComponent } from './components/achievements/achievements.component';
 import { ReferralsComponent } from './components/referrals/referrals.component';
 import { StatusPipe } from './pipes/status/status.pipe';
 import { JobstatusPipe } from './pipes/jobstatus/jobstatus.pipe';
@@ -16,6 +15,7 @@ import { ToDaysPipe } from './pipes/to-days/to-days.pipe';
 import { NewstoryComponent } from './components/newstory/newstory.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DefaultTextPipe } from './pipes/default-text/default-text.pipe';
+import { SanitizeUrlPipe } from './pipes/sanitizeUrl/sanitize-url.pipe';
 
 @NgModule({
   declarations: [
@@ -25,13 +25,13 @@ import { DefaultTextPipe } from './pipes/default-text/default-text.pipe';
     StoryCardComponent,
     HeaderComponent,
     PositionsComponent,
-    AchievementsComponent,
     ReferralsComponent,
     StatusPipe,
     JobstatusPipe,
     ToDaysPipe,
     NewstoryComponent,
-    DefaultTextPipe
+    DefaultTextPipe,
+    SanitizeUrlPipe
   ],
   imports: [
     BrowserModule,

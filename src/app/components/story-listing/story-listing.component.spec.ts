@@ -12,6 +12,7 @@ import { StatusPipe } from 'src/app/pipes/status/status.pipe';
 import { JobstatusPipe } from 'src/app/pipes/jobstatus/jobstatus.pipe';
 import { ToDaysPipe } from 'src/app/pipes/to-days/to-days.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SanitizeUrlPipe } from 'src/app/pipes/sanitizeUrl/sanitize-url.pipe';
 
 describe('StoryListingComponent', () => {
   let component: StoryListingComponent;
@@ -23,7 +24,7 @@ describe('StoryListingComponent', () => {
         AppRoutingModule,
         ReactiveFormsModule
       ],
-      declarations: [ StoryListingComponent, StoryCardComponent, StoryDetailsComponent, ReferralsComponent, PositionsComponent, PositionsComponent, NewstoryComponent, DefaultTextPipe, StatusPipe, JobstatusPipe, ToDaysPipe ]
+      declarations: [ StoryListingComponent, StoryCardComponent, StoryDetailsComponent, ReferralsComponent, PositionsComponent, PositionsComponent, NewstoryComponent, DefaultTextPipe, StatusPipe, JobstatusPipe, ToDaysPipe, SanitizeUrlPipe ]
     })
     .compileComponents();
   }));

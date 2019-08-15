@@ -15,4 +15,8 @@ export class StoryCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  showPlachoder(event){
+    event.target.src = "assets/images/story-image.jpg";
+  }
+
 }

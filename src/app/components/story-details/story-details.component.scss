@@ -7,7 +7,8 @@
 }
 
 .story-image-src {
-    width: 100%;
+    max-width: 100%;
+    max-height: 420px;
 }
 
 .story-title {
@@ -22,11 +23,11 @@
 
 .story-image {
     margin: 2em 0 2em 0;
+    text-align: center;
 }
 
 .story-content {
     margin: 0 0 2em 0;
-    line-height: 2em;
     font: $title;
     text-align: left;
     color: $primary-light-color;
@@ -47,5 +48,11 @@
 @media (min-width:1025px){
     .preview-mode {
         padding: 0px;
+        .story-image-src {
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            margin: auto;
+        }
     }   
 }

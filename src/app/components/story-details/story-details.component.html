@@ -8,7 +8,7 @@
       <div class="story-time">{{storyDetails.createdon | date : "MMM d, y, h:mm:ss a"}}</div>
     </div>
     <div class="story-image">
-      <img src="{{ storyDetails.img | defaultText : 'img' }}" alt="" class="story-image-src">
+      <img [src]="storyDetails.img | sanitizeUrl" alt="" class="story-image-src">
     </div>
     <div class="story-content">
       {{storyDetails.content | defaultText : 'content'}}

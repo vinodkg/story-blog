@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StoryDetailsComponent } from './story-details.component';
 import { DefaultTextPipe } from '../../pipes/default-text/default-text.pipe';
+import { SanitizeUrlPipe } from 'src/app/pipes/sanitizeUrl/sanitize-url.pipe';
 
 describe('StoryDetailsComponent', () => {
   let component: StoryDetailsComponent;
@@ -9,7 +10,7 @@ describe('StoryDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefaultTextPipe, StoryDetailsComponent ]
+      declarations: [ DefaultTextPipe, StoryDetailsComponent, SanitizeUrlPipe ]
     })
     .compileComponents();
   }));
