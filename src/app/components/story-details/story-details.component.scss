@@ -1,3 +1,5 @@
+@import "../../../assets/scss/_default-theme.scss";
+
 .story-details {
     width: 100%;
     max-width: 768px;
@@ -9,12 +11,12 @@
 }
 
 .story-title {
-    font-size: 2.5em;
+    font: $display-1;
     margin: 1em 0 1em 0;
 }
 
 .story-author-details {
-    font-size: 1em;
+    font: $body-2;
     margin: 1em 0 1em 0;
 }
 
@@ -25,14 +27,16 @@
 .story-content {
     margin: 0 0 2em 0;
     line-height: 2em;
-    font-size: 1.25em;
-    text-align: justify;
-    color: rgba(0, 0, 0, 0.84);
-    font-weight: 400;
+    font: $title;
+    text-align: left;
+    color: $primary-light-color;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .story-time {
-    color: rgba(0, 0, 0, 0.54);
+    color: $primary-light-color;
+    font: $caption;
 }
 
 .preview-mode {

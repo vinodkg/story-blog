@@ -1,10 +1,12 @@
+@import "../../../assets/scss/_default-theme.scss";
+
 .header {
     display: flex;
     height: 5rem;
     margin: 0 auto;
-    background: #FFFFFF;
+    background: $header-bg;
     width: 100%;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px 0 $box-shadow;
 }
 
 img.company-logo-src {
@@ -34,7 +36,7 @@ img.company-logo-src {
 }
 
 .header-menu-item-name {
-    border-bottom: 3px solid #FFFFFF;
+    border-bottom: 3px solid $no-border;
 }
 
 .header-menu-item-name.active {
