@@ -8,7 +8,7 @@ import { Story } from '../../models/story.modal';
 })
 export class StoryCardComponent implements OnInit {
 
-  @Input("details") cardDetails : Story; 
+  @Input("details") cardDetails : Story = new Story(); 
 
   constructor() { }
 

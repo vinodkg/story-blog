@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StoryDetailsComponent } from './story-details.component';
+import { DefaultTextPipe } from '../../pipes/default-text/default-text.pipe';
 
 describe('StoryDetailsComponent', () => {
   let component: StoryDetailsComponent;
@@ -8,7 +9,7 @@ describe('StoryDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StoryDetailsComponent ]
+      declarations: [ DefaultTextPipe, StoryDetailsComponent ]
     })
     .compileComponents();
   }));

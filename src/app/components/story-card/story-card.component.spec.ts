@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StoryCardComponent } from './story-card.component';
+import { Story } from 'src/app/models/story.modal';
 
 describe('StoryCardComponent', () => {
   let component: StoryCardComponent;

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReferralsComponent } from './referrals.component';
+import { StatusPipe } from '../../pipes/status/status.pipe';
 
 describe('ReferralsComponent', () => {
   let component: ReferralsComponent;
@@ -8,7 +9,7 @@ describe('ReferralsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReferralsComponent ]
+      declarations: [ ReferralsComponent, StatusPipe ]
     })
     .compileComponents();
   }));
