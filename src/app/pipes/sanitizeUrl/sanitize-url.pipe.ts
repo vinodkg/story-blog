@@ -9,7 +9,6 @@ export class SanitizeUrlPipe implements PipeTransform {
 
   }
   transform(value: any, args?: any): any {
-    console.log("Sanitizing");
     return this.sanitizer.bypassSecurityTrustUrl( value );
   }
 }
