@@ -1,14 +1,15 @@
+@import "../../../assets/scss/_default-theme.scss";
+
 .card {
     width: 100%;
     max-width: 25rem;
     height: 25rem;
     border-radius: 0.2rem;
-    border: 1px solid #DDD;
-    box-sizing: border-box;
+    border: 1px solid $border-color;
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 $summary-card-shadow-color;
     &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 $summary-card-shadow-color;
     }
 }
 
@@ -27,13 +28,13 @@
 }
 
 .card-date {
-    font-size: 0.7rem;
+    font: $caption;
     height: 2rem;
-    color: rgba(0,0,0,0.84);
+    color: $primary-dark-color;
 }
 
 .card-title{
-    font-size: 1.3rem;
+    font: $title;
     height: 3rem;
     display: flex;
     align-content: center;
@@ -41,10 +42,10 @@
 
 .card-summary {
     position: relative;
-    font-size: 1rem;
+    font: $subheading-1;
     height: 5rem;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.6em;
-    color: rgba(0,0,0,0.54);
+    color: $primary-light-color;
 }

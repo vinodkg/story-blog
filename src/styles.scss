@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/fonts/fonts.scss";
+@import "assets/scss/_default-theme.scss";
 
 *,
 *::before,
@@ -8,15 +9,14 @@
 }
 
 html{
-    font-size: 16px;
-    font-family: "nunito-sans-light";
+    font-family: $font-familiy;
     height: 100%;
 }
 
 
 body{
     margin: 0px;
-    background: rgba(0,0,0,0.05);
+    background: $body-bg;
     height: 100%;
 }
 .card {
@@ -28,17 +28,17 @@ body{
 .summary-card {
     width: 100%;
     max-width: 35rem;
-    background: #7189bf;
-    color: #ffffff;
+    background: $summary-card-bg;
+    color: $summary-card-color;
     height: 12.5rem;
     border-radius: 0.25rem;
     padding: 1.25rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 $box-shadow;
     &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 $box-shadow;
     }
 }
 
@@ -56,14 +56,12 @@ body{
 }
 
 .summary-card-cell-head {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font: $subheading-1;
     padding-bottom: 0.5rem;
 }
 
 .summary-card-cell-body{
-    font-size: 1.5rem;
-    font-weight: 700;
+    font: $title;
     padding-bottom: 0.5rem;
 }
 
@@ -73,10 +71,6 @@ body{
 }
 
 .summary-card-head {
-    .summary-card-cell-head{
-        font-size: 1.5rem;
-    }
-
     .summary-card-cell{
         flex-basis: 100%;
     }
@@ -96,7 +90,7 @@ body{
 .body-content {
     width: 100%;
     margin: auto;
-    background: #FFFFFF;
+    background: $body-content-bg;
     padding: 1rem;
     min-height: calc(100% - 5rem);
 }
@@ -110,8 +104,7 @@ body{
 
 .section-heading {
     padding: 2rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font: $title;
     padding-left: 0;
 }
 
@@ -122,11 +115,11 @@ body{
     flex-direction: column;
     padding: 1rem;
     cursor: pointer;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px 0 $box-shadow;
     margin-bottom: 1rem;
     border-radius: 0.25rem; 
     &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 $box-shadow;
     }
 }
 
@@ -138,16 +131,14 @@ body{
 .referral-item-second-line {
     display: flex;
     padding: 0.5rem 0 0.5rem 0;
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: rgba(0,0,0,0.54);
+    font: $body-1;
+    color: $primary-light-color;
 }
 
 .referral-item-title {
     flex: 1;
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: rgba(0,0,0,0.84);
+    font: $subheading-2;
+    color: $primary-dark-color;
 }
 
 .referral-item-status {
@@ -174,24 +165,24 @@ body{
     width: 6rem;
     float: right;
     text-align: center;
-    color: #FFFFFF;
+    color: $flag-text-color;
     border-radius: 0.2rem;
-    font-size: 0.8rem;
+    font: $body-1;
     padding: 0.05rem;
 }
 
 .flag-info {
-    background: #17a2b8;
+    background: $info-bg;
 }
 
 .flag-success {
-    background: #28a745;
+    background: $positive-bg;
 }
 
 .flag-progress {
-    background: #6c757d;
+    background: $warn-bg;
 }
 
 .flag-error {
-    background: #dc3545;
+    background: $negative-bg;
 }
