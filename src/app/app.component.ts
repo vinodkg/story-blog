@@ -11,6 +11,10 @@ export class AppComponent {
   currentTab: String = "home";
 
   constructor(private router: Router){
+    this.navigateToHome();
+  }
+
+  navigateToHome(event?){
     this.router.navigate(['']);
   }
 
