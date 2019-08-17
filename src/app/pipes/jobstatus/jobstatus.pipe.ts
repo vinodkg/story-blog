@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ConstantsService } from 'src/app/services/constants/constants.service';
-import { constants } from 'zlib';
 
 @Pipe({
   name: 'jobstatus'
