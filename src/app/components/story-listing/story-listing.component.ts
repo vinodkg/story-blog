@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Story } from '../../models/story.modal';
 import { Router } from '@angular/router';
-import { DataService } from 'src/app/services/dataservices/data.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'story-listing',
@@ -12,15 +12,16 @@ export class StoryListingComponent implements OnInit {
 
   stories : Story[] = [];
 
-  constructor(private router: Router, private dataService: DataService) { 
-    this.stories = dataService.getStories();
+  constructor(
+    private router: Router, 
+    private DATA: DataService) { 
+    this.stories = DATA.getStories();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  showStory(story, event) {
-    this.dataService.viewStoryDetails(story);
-    this.router.navigate(["home/" + story.id]);
+  showStory(story: Story, event: Event): void {
+    this.DATA.viewStoryDetails(story);
+    this.router.navigate(["/home" , story.id]);
   }
 }

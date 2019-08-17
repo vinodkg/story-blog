@@ -1,17 +1,8 @@
 <div class="header">
-  <img src="assets/images/company-logo.png" alt="" class="company-logo-src">
+  <img [src]="companyLogo" alt="" class="company-logo-src">
   <div class="header-menu">
-    <div class="header-menu-item">
-      <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'home'}" (click)="headerMenuClicked('home')">Home</div>
-    </div>
-    <div class="header-menu-item">
-        <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'positions'}" (click)="headerMenuClicked('positions')">Open positions</div>
-    </div>
-    <div class="header-menu-item">
-        <div class="header-menu-item-name" [ngClass]="{'active' : activeTab == 'referrals'}" (click)="headerMenuClicked('referrals')">My achievements</div>
-    </div>
-  </div>
-  <!-- <div class="header-user-details">
-    <div class="header-user-gemes"></div>
-  </div> -->
+    <a class="header-menu-item" *ngFor="let headerItem of headerTabConfig; let i = index" (click)="headerMenuClicked(headerItem, $event)">
+      <span class="header-menu-item-name" [ngClass]="{'active' : activeTab.id == headerItem.id }">{{ headerItem.name }}</span>
+    </a>
+  </div>  
 </div>

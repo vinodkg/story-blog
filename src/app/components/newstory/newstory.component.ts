@@ -3,8 +3,10 @@ import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angula
 import { Story } from '../../models/story.modal';
 import { DomSanitizer } from "@angular/platform-browser";
 import { SafeUrl } from "@angular/platform-browser";
-import { DataService } from 'src/app/services/dataservices/data.service';
+import { DataService } from 'src/app/services/data/data.service';
 import { Router } from '@angular/router';
+import { UtilityService } from 'src/app/services/utilities/utility.service';
+import { ConstantsService } from 'src/app/services/constants/constants.service';
 
 @Component({
   selector: 'newstory',
@@ -18,7 +20,12 @@ export class NewstoryComponent implements OnInit {
   newStoryDetails: Story = new Story(true);
   public imageUrl: SafeUrl;
   
-  constructor(private formBuilder : FormBuilder,private sanitizer: DomSanitizer, private dataServices: DataService, private router: Router) { 
+  constructor(private formBuilder : FormBuilder,
+              private sanitizer: DomSanitizer, 
+              private DATA: DataService, 
+              private router: Router, 
+              private UTILS: UtilityService,
+              private CONSTANTS: ConstantsService) { 
       this.storyForm = this.formBuilder.group({
           "title" : new FormControl(null, Validators.required),
           "summary" : new FormControl(null, Validators.required),
@@ -37,10 +44,10 @@ export class NewstoryComponent implements OnInit {
         continue;
       }
       if(key == "img" && !this.coverImagePreviewUrl){
-        this.newStoryDetails["img"] = "assets/images/story-image.jpg";
+        this.newStoryDetails["img"] = this.CONSTANTS.DEFAULT_IMAGES.STORY_COVER;
       }
     }
-    this.dataServices.viewStoryDetails(this.newStoryDetails);
+    this.DATA.viewStoryDetails(this.newStoryDetails);
   }
 
   ngOnInit() {
@@ -49,13 +56,13 @@ export class NewstoryComponent implements OnInit {
   onSubmit(){
     this.isSubmitted = true;
     if(this.storyForm.valid){
-      this.newStoryDetails.createdon = new Date().getTime();
-      this.newStoryDetails.id = new Date().getTime() + "";
-      this.dataServices.addStories(this.newStoryDetails);
+      this.newStoryDetails.createdon = this.UTILS.GET_TIMESTAMP();
+      this.newStoryDetails.id = this.UTILS.GET_TIMESTAMP().toString();
+      this.DATA.addStories(this.newStoryDetails);
       this.router.navigate(['']);
-      window.alert("Your story added successfully!");
+      this.UTILS.SHOW_MESSAGE(this.CONSTANTS.MESSAGES.STORY_CREATION_SUCCESSFUL);
     } else {
-      window.alert("Please fill all the details!");
+      this.UTILS.SHOW_MESSAGE(this.CONSTANTS.MESSAGES.STORY_CREATION_FORM_INVALID);
     }
   }
 
@@ -65,7 +72,7 @@ export class NewstoryComponent implements OnInit {
   }
 
   showPlachoder(event){
-    event.target.src = "assets/images/story-image.jpg";
+    event.target.src = this.CONSTANTS.DEFAULT_IMAGES.STORY_COVER;
   }
 
   addCoverImage(fileChooser : HTMLElement){
@@ -77,8 +84,7 @@ export class NewstoryComponent implements OnInit {
       this.coverImagePreviewUrl = URL.createObjectURL(event.target.files[0]);
       this.newStoryDetails["img"] = this.coverImagePreviewUrl;
     }else{
-      console.log("No File Choosen!");
+      this.UTILS.LOGGER.LOG_WARN("No File Choosen!");
     }
   }
-
 }

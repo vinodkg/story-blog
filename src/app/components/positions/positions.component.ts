@@ -1,23 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Position } from '../../models/position.model';
-import { DataService } from 'src/app/services/dataservices/data.service';
+import { DataService } from '../../services/data/data.service';
+import { UtilityService } from '../../services/utilities/utility.service';
+import { ConstantsService } from '../../services/constants/constants.service';
 
 @Component({
-  selector: 'app-positions',
+  selector: 'positions',
   templateUrl: './positions.component.html',
   styleUrls: ['./positions.component.scss']
 })
 export class PositionsComponent implements OnInit {
 
   positions: Position[] = [];
-  constructor(private dataService: DataService) { 
-      this.positions = this.dataService.getPositions();
+  constructor(
+    private DATA: DataService,
+    private UTILS: UtilityService,
+    private CONSTANTS: ConstantsService) { 
+      this.positions = this.DATA.getPositions();
   }
 
   ngOnInit() {
   }
 
   openPostionDetails(position, event){
-    window.alert("Coming Soon!");
+    this.UTILS.LOGGER.LOG_INFO(position);
+    this.UTILS.SHOW_MESSAGE(this.CONSTANTS.MESSAGES.PENDING_FEATURE);
   }
 }
