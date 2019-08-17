@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Story } from '../../models/story.modal';
+import { ConstantsService } from 'src/app/services/constants/constants.service';
 
 @Component({
   selector: 'story-card',
@@ -10,13 +11,14 @@ export class StoryCardComponent implements OnInit {
 
   @Input("details") cardDetails : Story = new Story(); 
 
-  constructor() { }
+  constructor(
+    private CONSTANTS : ConstantsService
+  ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   showPlachoder(event){
-    event.target.src = "assets/images/story-image.jpg";
+    event.target.src = this.CONSTANTS.DEFAULT_IMAGES.STORY_COVER;
   }
 
 }

@@ -1,24 +1,31 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ConstantsService } from 'src/app/services/constants/constants.service';
 
 @Pipe({
   name: 'status'
 })
 export class StatusPipe implements PipeTransform {
 
+  constructor(private CONSTANTS: ConstantsService){
+
+  }
+
+  APPLICATION_STATUSES = this.CONSTANTS.APPLICATION_STATUS_LABELS;
+
   transform(value: any, args?: any): any {
-    let status = "NA";
+    let status = this.APPLICATION_STATUSES.OTHER;
     switch(value) {
       case 1:
-        status = "Applied";
+        status = this.APPLICATION_STATUSES.APPLIED;
         break;
       case 2:
-        status = "In Process";
+        status = this.APPLICATION_STATUSES.IN_PROCESS;
         break;
       case 3:
-          status = "Hired";
-          break;
+        status = this.APPLICATION_STATUSES.HIRED;
+        break;
       case 4:
-        status = "Not Hired";
+        status = this.APPLICATION_STATUSES.NOT_HIRED;
         break;
 
     }

@@ -14,7 +14,7 @@ export const POSITIONS: Position[] = [
       "status": 1,
       "postionId": 4232,
       "postedon": 1565821320000,
-      "location": "Barcelona",
+      "location": "Barcelona, Spain",
       "department": "Marketing"
     },
     {
@@ -22,7 +22,7 @@ export const POSITIONS: Position[] = [
       "status": 2,
       "postionId": 4232,
       "postedon": 1565908800000,
-      "location": "Paris",
+      "location": "Paris, France",
       "department": "Sales"
     },
     {
@@ -30,7 +30,7 @@ export const POSITIONS: Position[] = [
       "status": 3,
       "postionId": 4232,
       "postedon": 1565821140000,
-      "location": "London",
+      "location": "London, UK",
       "department": "HR"
     },
     {
@@ -38,7 +38,7 @@ export const POSITIONS: Position[] = [
       "status": 3,
       "postionId": 4232,
       "postedon": 1566082440000,
-      "location": "Munich",
+      "location": "Munich, Germany",
       "department": "HR"
     },
     {

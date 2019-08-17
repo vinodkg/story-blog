@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { STORIES } from '../../mocks/stories.mock';
 import { REFERRALS } from '../../mocks/referrals.mock';
 import { POSITIONS } from '../../mocks/positions.mock';
-import { Story } from 'src/app/models/story.modal';
+import { Story } from '../../models/story.modal';
 import { Subject } from 'rxjs';
+import { HEADERS } from '../../mocks/headers.mock';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,6 @@ import { Subject } from 'rxjs';
 export class DataService {
 
   private viewStory = new Subject<Story>();
-
   viewStoryObs = this.viewStory.asObservable();
   currentStory: Story;
 
@@ -25,8 +25,6 @@ export class DataService {
     STORIES.unshift(newStory);
   }
 
-
-
   viewStoryDetails(story: Story){
     this.currentStory = story;
     this.viewStory.next(story);
@@ -38,5 +36,9 @@ export class DataService {
 
   getPositions(){
     return POSITIONS;
+  }
+
+  getHeaders() {
+    return HEADERS;
   }
 }

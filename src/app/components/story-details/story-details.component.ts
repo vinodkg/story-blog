@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Story } from '../../models/story.modal';
-import { DataService } from 'src/app/services/dataservices/data.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'story-details',
@@ -11,13 +11,12 @@ export class StoryDetailsComponent implements OnInit {
   _storyDetails : Story = new Story();
   _isPreviewMode = false;
 
-  constructor(private dataService: DataService) {
-    this.dataService.viewStoryObs.subscribe((story: Story) => {
+  constructor(private DATA: DataService) {
+    this.DATA.viewStoryObs.subscribe((story: Story) => {
         this.storyDetails = story;
     });
   }
 
-  
   @Input("story") set storyDetails(value){
     this._storyDetails = value;
   }
@@ -37,13 +36,12 @@ export class StoryDetailsComponent implements OnInit {
     return this._isPreviewMode;
   }
 
-
   ngOnInit() {
     if(this.isPreviewMode){
         this.storyDetails = new Story(true);
     }else{
-      if(this.dataService.currentStory){
-        this.storyDetails = this.dataService.currentStory;
+      if(this.DATA.currentStory){
+        this.storyDetails = this.DATA.currentStory;
       }else{
         this.storyDetails = new Story();
       }

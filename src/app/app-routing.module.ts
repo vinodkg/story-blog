@@ -12,7 +12,8 @@ const routes: Routes = [
   {"path": "home/:storyid", "component": StoryDetailsComponent},
   {"path" : "referrals", "component" : ReferralsComponent},
   {"path" : "positions", "component" : PositionsComponent},
-  {"path" : "newstory", "component" : NewstoryComponent}
+  {"path" : "newstory", "component" : NewstoryComponent},
+  {"path" : "**", redirectTo: "home"}
 ];
 
 @NgModule({
