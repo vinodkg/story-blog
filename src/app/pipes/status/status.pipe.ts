@@ -6,7 +6,7 @@ import { ConstantsService } from 'src/app/services/constants/constants.service';
 })
 export class StatusPipe implements PipeTransform {
 
-  constructor(private CONSTANTS: ConstantsService){
+  constructor(private CONSTANTS: ConstantsService) {
 
   }
 
@@ -14,7 +14,7 @@ export class StatusPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     let status = this.APPLICATION_STATUSES.OTHER;
-    switch(value) {
+    switch (value) {
       case 1:
         status = this.APPLICATION_STATUSES.APPLIED;
         break;

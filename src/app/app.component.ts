@@ -11,13 +11,13 @@ import { UtilityService } from './services/utilities/utility.service';
 export class AppComponent {
   title = 'story-blog';
   currentTab: Head = {
-    "name" : "Home",
-    "id" : "home"
+    name : 'Home',
+    id : 'home'
   };
 
-  constructor(private router: Router, private UTILS: UtilityService){}
+  constructor(private router: Router, private UTILS: UtilityService) {}
 
-  navigateToHome(event?){
+  navigateToHome(event?) {
     this.router.navigate(['']);
   }
 

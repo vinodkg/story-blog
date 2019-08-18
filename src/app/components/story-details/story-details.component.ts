@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data/data.service';
   styleUrls: ['./story-details.component.scss']
 })
 export class StoryDetailsComponent implements OnInit {
-  _storyDetails : Story = new Story();
+  _storyDetails: Story = new Story();
   _isPreviewMode = false;
 
   constructor(private DATA: DataService) {
@@ -17,32 +17,32 @@ export class StoryDetailsComponent implements OnInit {
     });
   }
 
-  @Input("story") set storyDetails(value){
+  @Input('story') set storyDetails(value) {
     this._storyDetails = value;
   }
 
-  get storyDetails(){
+  get storyDetails() {
     return this._storyDetails;
   }
 
-  @Input("previewMode") set isPreviewMode(value){
+  @Input('previewMode') set isPreviewMode(value) {
     this._isPreviewMode = false;
-    if(value){
+    if (value) {
       this._isPreviewMode = value;
     }
   }
 
-  get isPreviewMode(){
+  get isPreviewMode() {
     return this._isPreviewMode;
   }
 
   ngOnInit() {
-    if(this.isPreviewMode){
+    if (this.isPreviewMode) {
         this.storyDetails = new Story(true);
-    }else{
-      if(this.DATA.currentStory){
+    } else {
+      if (this.DATA.currentStory) {
         this.storyDetails = this.DATA.currentStory;
-      }else{
+      } else {
         this.storyDetails = new Story();
       }
     }

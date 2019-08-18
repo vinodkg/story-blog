@@ -5,14 +5,14 @@ import { ConstantsService } from 'src/app/services/constants/constants.service';
   name: 'jobstatus'
 })
 export class JobstatusPipe implements PipeTransform {
-  constructor(private CONSTANTS : ConstantsService){
+  constructor(private CONSTANTS: ConstantsService) {
   }
 
   JOB_STATUSES = this.CONSTANTS.JOB_STATUS_LABELS;
-  
+
   transform(value: any, args?: any): any {
     let status = this.JOB_STATUSES.OTHER;
-    switch(value) {
+    switch (value) {
       case 1:
         status = this.JOB_STATUSES.ACTIVE;
         break;

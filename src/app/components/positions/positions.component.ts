@@ -15,14 +15,14 @@ export class PositionsComponent implements OnInit {
   constructor(
     private DATA: DataService,
     private UTILS: UtilityService,
-    private CONSTANTS: ConstantsService) { 
+    private CONSTANTS: ConstantsService) {
       this.positions = this.DATA.getPositions();
   }
 
   ngOnInit() {
   }
 
-  openPostionDetails(position, event){
+  openPostionDetails(position, event) {
     this.UTILS.LOGGER.LOG_INFO(position);
     this.UTILS.SHOW_MESSAGE(this.CONSTANTS.MESSAGES.PENDING_FEATURE);
   }

@@ -7,13 +7,13 @@ import { PositionsComponent } from './components/positions/positions.component';
 import { NewstoryComponent } from './components/newstory/newstory.component';
 
 const routes: Routes = [
-  {"path" : "", redirectTo: "home", pathMatch: "full"},
-  {"path": "home", "component": StoryListingComponent},
-  {"path": "home/:storyid", "component": StoryDetailsComponent},
-  {"path" : "referrals", "component" : ReferralsComponent},
-  {"path" : "positions", "component" : PositionsComponent},
-  {"path" : "newstory", "component" : NewstoryComponent},
-  {"path" : "**", redirectTo: "home"}
+  {path : '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: StoryListingComponent},
+  {path: 'home/:storyid', component: StoryDetailsComponent},
+  {path : 'referrals', component : ReferralsComponent},
+  {path : 'positions', component : PositionsComponent},
+  {path : 'newstory', component : NewstoryComponent},
+  {path : '**', redirectTo: 'home'}
 ];
 
 @NgModule({

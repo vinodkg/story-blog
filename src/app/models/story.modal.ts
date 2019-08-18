@@ -1,15 +1,15 @@
 export class Story {
-    constructor(emptyStory? : boolean){
+    constructor(emptyStory?: boolean) {
         this.createdon = new Date().getTime();
-        this.author = "Matt";
-        this.img = "assets/images/story-image.jpg";
+        this.author = 'Matt';
+        this.img = 'assets/images/story-image.jpg';
     }
-    id: String;
-    title : String;
-    summary: String;
-    img: String;
-    content: String;
-    author: String;
-    tags: String[];
-    createdon: Number;
+    id: string;
+    title: string;
+    summary: string;
+    img: string;
+    content: string;
+    author: string;
+    tags: string[];
+    createdon: number;
 }

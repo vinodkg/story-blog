@@ -17,7 +17,7 @@ export class DataService {
 
   constructor() { }
 
-  getStories(){
+  getStories() {
     return STORIES;
   }
 
@@ -25,16 +25,16 @@ export class DataService {
     STORIES.unshift(newStory);
   }
 
-  viewStoryDetails(story: Story){
+  viewStoryDetails(story: Story) {
     this.currentStory = story;
     this.viewStory.next(story);
   }
 
-  getReferrals(){
+  getReferrals() {
     return REFERRALS;
   }
 
-  getPositions(){
+  getPositions() {
     return POSITIONS;
   }
 

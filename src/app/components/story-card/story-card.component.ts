@@ -9,15 +9,15 @@ import { ConstantsService } from 'src/app/services/constants/constants.service';
 })
 export class StoryCardComponent implements OnInit {
 
-  @Input("details") cardDetails : Story = new Story(); 
+  @Input('details') cardDetails: Story = new Story();
 
   constructor(
-    private CONSTANTS : ConstantsService
+    private CONSTANTS: ConstantsService
   ) { }
 
   ngOnInit() {}
 
-  showPlachoder(event){
+  showPlachoder(event) {
     event.target.src = this.CONSTANTS.DEFAULT_IMAGES.STORY_COVER;
   }
 

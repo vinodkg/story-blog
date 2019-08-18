@@ -1,9 +1,9 @@
 export class Referral {
-    name : String;
-    referralId : Number;
-    positionId : Number;
-    positionName: String;
-    appliedOn: Number;
-    status: Number;
-    referredEmpId : Number;
+    name: string;
+    referralId: number;
+    positionId: number;
+    positionName: string;
+    appliedOn: number;
+    status: number;
+    referredEmpId: number;
 }
