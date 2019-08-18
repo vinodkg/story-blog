@@ -10,11 +10,11 @@ import { DataService } from 'src/app/services/data/data.service';
 })
 export class StoryListingComponent implements OnInit {
 
-  stories : Story[] = [];
+  stories: Story[] = [];
 
   constructor(
-    private router: Router, 
-    private DATA: DataService) { 
+    private router: Router,
+    private DATA: DataService) {
     this.stories = DATA.getStories();
   }
 
@@ -22,6 +22,6 @@ export class StoryListingComponent implements OnInit {
 
   showStory(story: Story, event: Event): void {
     this.DATA.viewStoryDetails(story);
-    this.router.navigate(["/home" , story.id]);
+    this.router.navigate(['/home' , story.id]);
   }
 }

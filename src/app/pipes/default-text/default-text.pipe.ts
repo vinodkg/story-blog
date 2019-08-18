@@ -6,7 +6,7 @@ import { ConstantsService } from '../../services/constants/constants.service';
 })
 export class DefaultTextPipe implements PipeTransform {
 
-  constructor(private CONSTANTS: ConstantsService){
+  constructor(private CONSTANTS: ConstantsService) {
 
   }
 
@@ -14,15 +14,15 @@ export class DefaultTextPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     let defaultText = value;
-    if(!value){
-      switch(args){
-          case "title":
+    if (!value) {
+      switch (args) {
+          case 'title':
             defaultText = this.DEFAULT_LABELS.TITLE;
             break;
-          case "img":
+          case 'img':
             defaultText = this.DEFAULT_LABELS.IMAGE;
             break;
-          case "content":
+          case 'content':
             defaultText = this.DEFAULT_LABELS.CONTENT;
             break;
       }

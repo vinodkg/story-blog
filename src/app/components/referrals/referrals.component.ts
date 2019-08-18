@@ -11,7 +11,7 @@ import { ConstantsService } from '../../services/constants/constants.service';
 })
 export class ReferralsComponent implements OnInit {
 
-  referrals : Referral[] = [];
+  referrals: Referral[] = [];
 
   constructor(
       private DATA: DataService,
@@ -21,8 +21,8 @@ export class ReferralsComponent implements OnInit {
    }
 
   ngOnInit() {}
-  
-  openReferral(referral: Referral, event: Event){
+
+  openReferral(referral: Referral, event: Event) {
     this.UTILS.LOGGER.LOG_INFO(referral);
     this.UTILS.SHOW_MESSAGE(this.CONSTANTS.MESSAGES.PENDING_FEATURE);
   }
