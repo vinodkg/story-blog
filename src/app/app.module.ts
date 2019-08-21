@@ -16,6 +16,7 @@ import { NewstoryComponent } from './components/newstory/newstory.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DefaultTextPipe } from './pipes/default-text/default-text.pipe';
 import { SanitizeUrlPipe } from './pipes/sanitizeUrl/sanitize-url.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SanitizeUrlPipe } from './pipes/sanitizeUrl/sanitize-url.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
